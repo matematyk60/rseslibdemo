@@ -20,6 +20,13 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/resources/rseslib-3.2.3/rseslib.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>weka</groupId>
+            <artifactId>weka</artifactId>
+            <version>3.8.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/rseslib-3.2.3/weka.jar</systemPath>
+        </dependency>
     </dependencies>
 
 </project>
