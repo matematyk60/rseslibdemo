@@ -9,6 +9,11 @@ public class Demo {
 
         knnPlayground.singleClassifierTest();
         knnPlayground.crossValidationClassifierTest();
+
+        RoughSetRulePlayground playground = new RoughSetRulePlayground();
+
+        playground.singleClassifierTest();
+        playground.crossValidationClassifierTest();
     }
 
 }
