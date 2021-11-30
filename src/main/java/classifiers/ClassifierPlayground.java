@@ -1,5 +1,7 @@
+package classifiers;
+
+import classifiers.KnnPlayground;
 import rseslib.processing.classification.*;
-import rseslib.processing.classification.parameterised.knn.KnnClassifier;
 import rseslib.structure.attribute.formats.HeaderFormatException;
 import rseslib.structure.data.DoubleData;
 import rseslib.structure.data.formats.DataFormatException;
@@ -54,7 +56,7 @@ public abstract class ClassifierPlayground {
         // test classifier
         SingleClassifierTest classifierTest = new SingleClassifierTest();
         TestResult result = classifierTest.classify(classifier, testDataTable, new StdOutProgress());
-        result.getStatisticsAndResults().list(System.out);
+        Report.displaynl(result.getStatisticsAndResults());
     }
 
     public void crossValidationClassifierTest() throws PropertyConfigurationException, InterruptedException {

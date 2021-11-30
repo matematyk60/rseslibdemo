@@ -1,3 +1,5 @@
+package classifiers;
+
 import rseslib.processing.classification.Classifier;
 import rseslib.processing.classification.parameterised.knn.KnnClassifier;
 import rseslib.processing.classification.rules.roughset.RoughSetRuleClassifier;
@@ -15,7 +17,7 @@ public class RoughSetRulePlayground extends ClassifierPlayground {
     private final Properties roughSetClassifierProperties;
 
     public RoughSetRulePlayground() throws HeaderFormatException, DataFormatException, IOException, InterruptedException {
-        //initialize KNN classifier properties
+        //initialize Rough Set rule classifier properties
 
         this.roughSetClassifierProperties = new Properties();
 
@@ -34,8 +36,8 @@ public class RoughSetRulePlayground extends ClassifierPlayground {
     }
 
     @Override
-    public ClassifierCreationData classifierCreationData() {
-        return new ClassifierCreationData("Rough set rule classifier", RoughSetRuleClassifier.class, roughSetClassifierProperties);
+    public ClassifierPlayground.ClassifierCreationData classifierCreationData() {
+        return new ClassifierPlayground.ClassifierCreationData("Rough set rule classifier", RoughSetRuleClassifier.class, roughSetClassifierProperties);
     }
 
 

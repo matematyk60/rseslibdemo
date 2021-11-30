@@ -1,3 +1,5 @@
+package classifiers;
+
 import rseslib.processing.classification.Classifier;
 import rseslib.processing.classification.parameterised.knn.KnnClassifier;
 import rseslib.structure.attribute.formats.HeaderFormatException;
@@ -33,8 +35,8 @@ public class KnnPlayground extends ClassifierPlayground {
     }
 
     @Override
-    public ClassifierCreationData classifierCreationData() {
-        return new ClassifierCreationData("KNN Classifier", KnnClassifier.class, this.knnClassifierProperties);
+    public ClassifierPlayground.ClassifierCreationData classifierCreationData() {
+        return new ClassifierPlayground.ClassifierCreationData("KNN Classifier", KnnClassifier.class, this.knnClassifierProperties);
     }
 
 
